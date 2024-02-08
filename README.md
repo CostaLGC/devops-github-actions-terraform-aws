@@ -1,26 +1,25 @@
 # DevOps GitHub Actions Terraform AWS
 
-- Ensina boas práticas para aplicação e remoção de recursos com Terraform, incluindo etapas detalhadas para o `apply` e o `destroy`.
-
-Automatize e gerencie sua infraestrutura na AWS com GitHub Actions e Terraform! Este repositório oferece workflows prontos para uso que integram poderosas ferramentas de automação, permitindo que você provisione e gerencie recursos na nuvem de forma eficiente.
+Este repositório é um recurso valioso para DevOps que desejam automatizar e gerenciar infraestrutura na AWS usando GitHub Actions e Terraform. Aqui estão alguns destaques:
 
 ## Recursos
 
-- Projetado para acelerar o desenvolvimento e a entrega contínua (CI/CD).
-- Configuração fácil e pronta para uso com Terraform e AWS.
-- Fluxos de trabalho personalizáveis para atender às suas necessidades específicas de DevOps.
+- **Acelera o Desenvolvimento e Entrega Contínua (CI/CD):** Projetado para facilitar o fluxo de trabalho de desenvolvimento e entrega contínua.
+- **Configuração Fácil com Terraform e AWS:** Oferece uma configuração simples e pronta para uso com Terraform e AWS.
+- **Personalizável:** Fluxos de trabalho flexíveis que podem ser ajustados para atender às necessidades específicas de DevOps.
 
 ## Como Usar
 
-1. Faça um fork deste repositório.
-2. Clone o fork para o seu ambiente local.
-3. Configure as variáveis de ambiente necessárias no GitHub.
-4. Personalize os workflows conforme necessário para o seu projeto.
+1. **Faça um Fork:** Comece fazendo um fork deste repositório para sua própria conta no GitHub.
+2. **Clone para o Ambiente Local:** Clone o fork para o seu ambiente local para começar a trabalhar.
+3. **Configuração das Variáveis de Ambiente:** Configure as variáveis de ambiente necessárias no GitHub para permitir a integração com AWS e Terraform.
+4. **Personalize os Workflows:** Adapte os workflows conforme necessário para atender às exigências do seu projeto.
 
 ## Contribuindo
 
-Sinta-se à vontade para contribuir com melhorias, correções de bugs ou novos recursos! Basta abrir uma issue ou enviar uma pull request.
+Você é encorajado a contribuir para este projeto! Sinta-se à vontade para abrir issues relatando problemas, sugerir melhorias ou enviar pull requests com novos recursos.
 
 ## Licença
 
-Este projeto está licenciado sob a [MIT License](LICENSE).
+Este projeto está licenciado sob a [MIT License](LICENSE). Todos são bem-vindos para utilizar e contribuir para este projeto.
+
