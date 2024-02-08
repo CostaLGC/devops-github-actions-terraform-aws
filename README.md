@@ -10,6 +10,16 @@ Automatize e gerencie sua infraestrutura na AWS com GitHub Actions e Terraform! 
 - Ensina boas práticas para aplicação e remoção de recursos com Terraform, incluindo etapas detalhadas para o `apply` e o `destroy`.
 - Utiliza um provider Terraform para se conectar à AWS e gerenciar recursos na nuvem.
 
+## Como Usar
+
+1. Faça um fork deste repositório.
+2. Clone o fork para o seu ambiente local.
+3. Configure as variáveis de ambiente necessárias no GitHub.
+4. Personalize os workflows conforme necessário para o seu projeto.
+
+## Estado do Terraform
+
+O estado do Terraform - arquivo `tfstate.tf` - é um arquivo que registra os recursos provisionados e sua configuração atual, permitindo ao Terraform entender e gerenciar as alterações na infraestrutura de forma precisa. Ele rastreia informações como IDs de recursos, metadados e dependências entre os recursos. Este estado é crucial para o Terraform determinar o que precisa ser modificado, criado ou removido em cada execução, garantindo a consistência entre a descrição declarativa no código Terraform e o estado real da infraestrutura na nuvem. O estado do Terraform pode ser armazenado localmente ou em um armazenamento remoto para facilitar o trabalho em equipe e garantir a segurança das informações sensíveis.
 
 ## Configuração do Provider
 
@@ -41,16 +51,6 @@ jobs:
 
 ```
 
-## Como Usar
-
-1. Faça um fork deste repositório.
-2. Clone o fork para o seu ambiente local.
-3. Configure as variáveis de ambiente necessárias no GitHub.
-4. Personalize os workflows conforme necessário para o seu projeto.
-
-## Estado do Terraform
-
-O estado do Terraform - arquivo `tfstate.tf` - é um arquivo que registra os recursos provisionados e sua configuração atual, permitindo ao Terraform entender e gerenciar as alterações na infraestrutura de forma precisa. Ele rastreia informações como IDs de recursos, metadados e dependências entre os recursos. Este estado é crucial para o Terraform determinar o que precisa ser modificado, criado ou removido em cada execução, garantindo a consistência entre a descrição declarativa no código Terraform e o estado real da infraestrutura na nuvem. O estado do Terraform pode ser armazenado localmente ou em um armazenamento remoto para facilitar o trabalho em equipe e garantir a segurança das informações sensíveis.
 
 ## Contribuindo
 
