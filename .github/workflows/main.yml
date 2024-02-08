@@ -13,6 +13,11 @@ jobs:
     
     - name: Install OpenSSL
       run: sudo apt-get install openssl
+      
+    - name: Verificar se terraform.tfstate existe
+      run: test -f terraform.tfstate && echo "::set-output name=tfstate_exists::true" || echo "::set-output name=tfstate_exists::false"
+      id: check_tfstate
     
-    - name: Descriptografar arquivo
-      run: openssl aes-256-cbc -d -in arquivo_criptografado.txt -out arquivo_descriptografado.txt -k ${{ secrets.KEY }}
+    - name: Descriptografar terraform.tfstate
+      if: steps.check_tfstate.outputs.tfstate_exists == 'true'
+      run: openssl aes-256-cbc -d -in terraform.tfstate -out terraform.tfstate.decrypted -k ${{ secrets.TERRAFORM_TFSTATE_PASSWORD }}
