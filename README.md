@@ -48,6 +48,10 @@ jobs:
 3. Configure as variáveis de ambiente necessárias no GitHub.
 4. Personalize os workflows conforme necessário para o seu projeto.
 
+## Estado do Terraform
+
+O estado do Terraform - arquivo `tfstate.tf` - é um arquivo que registra os recursos provisionados e sua configuração atual, permitindo ao Terraform entender e gerenciar as alterações na infraestrutura de forma precisa. Ele rastreia informações como IDs de recursos, metadados e dependências entre os recursos. Este estado é crucial para o Terraform determinar o que precisa ser modificado, criado ou removido em cada execução, garantindo a consistência entre a descrição declarativa no código Terraform e o estado real da infraestrutura na nuvem. O estado do Terraform pode ser armazenado localmente ou em um armazenamento remoto para facilitar o trabalho em equipe e garantir a segurança das informações sensíveis.
+
 ## Contribuindo
 
 Sinta-se à vontade para contribuir com melhorias, correções de bugs ou novos recursos! Basta abrir uma issue ou enviar uma pull request.
