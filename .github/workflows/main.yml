@@ -11,16 +11,12 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
       
-    - name: Criar terraform.tfstate se não existir
-      if: steps.check_tfstate.outputs.tfstate_exists != 'true'
-      run: echo "Criando terraform.tfstate..." && touch terraform.tfstate
+
     
     - name: Install OpenSSL
       run: sudo apt-get install openssl
       
-    - name: Verificar se terraform.tfstate existe
-      run: test -f terraform.tfstate && echo "::set-output name=tfstate_exists::true" || echo "::set-output name=tfstate_exists::false"
-      id: check_tfstate
+
     
     - name: Descriptografar terraform.tfstate
       if: steps.check_tfstate.outputs.tfstate_exists == 'true'
