@@ -1,5 +1,7 @@
 # DevOps GitHub Actions Terraform AWS
 
+- Ensina boas práticas para aplicação e remoção de recursos com Terraform, incluindo etapas detalhadas para o `apply` e o `destroy`.
+
 Automatize e gerencie sua infraestrutura na AWS com GitHub Actions e Terraform! Este repositório oferece workflows prontos para uso que integram poderosas ferramentas de automação, permitindo que você provisione e gerencie recursos na nuvem de forma eficiente.
 
 ## Recursos
