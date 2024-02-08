@@ -13,13 +13,7 @@ Automatize e gerencie sua infraestrutura na AWS com GitHub Actions e Terraform! 
 
 ## Configuração do Provider
 
-A primeira etapa ao trabalhar com Terraform é a configuração do provider, responsável por comunicar-se com o provedor de nuvem (no nosso caso, a AWS) e realizar operações nos recursos. Para isso, utilizamos o bloco `provider` no código Terraform. Veja um exemplo:
-
-```hcl
-provider "aws" {
-  region = "us-east-1"
-}
-```
+A primeira etapa ao trabalhar com Terraform é a configuração do provider, responsável por comunicar-se com o provedor de nuvem (no nosso caso, a AWS) e realizar operações nos recursos. Para isso, utilizamos o bloco `provider` no código Terraform. 
 
 No Terraform, o provedor (`provider`) é uma parte fundamental que estabelece a conexão com um provedor de nuvem, como a AWS, Azure, Google Cloud, entre outros. Para que o Terraform possa interagir com a infraestrutura na nuvem, é necessário configurar corretamente o provedor, o que inclui fornecer credenciais de acesso.
 
@@ -27,6 +21,13 @@ As credenciais de acesso são necessárias para autenticar-se na nuvem e realiza
 
 Essas credenciais podem ser configuradas de várias maneiras, incluindo o uso de arquivos de configuração locais, variáveis de ambiente, ou, em ambientes de nuvem, associando uma IAM Role à instância onde o Terraform está sendo executado.
 
+Veja um exemplo:
+
+```hcl
+provider "aws" {
+  region = "us-east-1"
+}
+```
 No exemplo abaixo, podemos ver como as credenciais de acesso à AWS são configuradas como variáveis de ambiente em um workflow do GitHub Actions:
 
 ```yaml
