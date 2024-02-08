@@ -17,10 +17,6 @@ Automatize e gerencie sua infraestrutura na AWS com GitHub Actions e Terraform! 
 3. Configure as variáveis de ambiente necessárias no GitHub.
 4. Personalize os workflows conforme necessário para o seu projeto.
 
-## Estado do Terraform
-
-O estado do Terraform - arquivo `tfstate.tf` - é um arquivo que registra os recursos provisionados e sua configuração atual, permitindo ao Terraform entender e gerenciar as alterações na infraestrutura de forma precisa. Ele rastreia informações como IDs de recursos, metadados e dependências entre os recursos. Este estado é crucial para o Terraform determinar o que precisa ser modificado, criado ou removido em cada execução, garantindo a consistência entre a descrição declarativa no código Terraform e o estado real da infraestrutura na nuvem. O estado do Terraform pode ser armazenado localmente ou em um armazenamento remoto para facilitar o trabalho em equipe e garantir a segurança das informações sensíveis.
-
 ## Configuração do Provider
 
 A primeira etapa ao trabalhar com Terraform é a configuração do provider, responsável por comunicar-se com o provedor de nuvem (no nosso caso, a AWS) e realizar operações nos recursos. Para isso, utilizamos o bloco `provider` no código Terraform. 
@@ -51,6 +47,9 @@ jobs:
 
 ```
 
+## Estado do Terraform
+
+O estado do Terraform - arquivo `tfstate.tf` - é um arquivo que registra os recursos provisionados e sua configuração atual, permitindo ao Terraform entender e gerenciar as alterações na infraestrutura de forma precisa. Ele rastreia informações como IDs de recursos, metadados e dependências entre os recursos. Este estado é crucial para o Terraform determinar o que precisa ser modificado, criado ou removido em cada execução, garantindo a consistência entre a descrição declarativa no código Terraform e o estado real da infraestrutura na nuvem. O estado do Terraform pode ser armazenado localmente ou em um armazenamento remoto para facilitar o trabalho em equipe e garantir a segurança das informações sensíveis.
 
 ## Contribuindo
 
