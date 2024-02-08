@@ -49,7 +49,15 @@ jobs:
 
 ## Estado do Terraform
 
-O estado do Terraform - arquivo `tfstate.tf` - é um arquivo que registra os recursos provisionados e sua configuração atual, permitindo ao Terraform entender e gerenciar as alterações na infraestrutura de forma precisa. Ele rastreia informações como IDs de recursos, metadados e dependências entre os recursos. Este estado é crucial para o Terraform determinar o que precisa ser modificado, criado ou removido em cada execução, garantindo a consistência entre a descrição declarativa no código Terraform e o estado real da infraestrutura na nuvem. O estado do Terraform pode ser armazenado localmente ou em um armazenamento remoto para facilitar o trabalho em equipe e garantir a segurança das informações sensíveis.
+O estado do Terraform - arquivo `terraform.tfstate` - é um arquivo que registra os recursos provisionados e sua configuração atual, permitindo ao Terraform entender e gerenciar as alterações na infraestrutura de forma precisa. Ele rastreia informações como IDs de recursos, metadados e dependências entre os recursos. Este estado é crucial para o Terraform determinar o que precisa ser modificado, criado ou removido em cada execução, garantindo a consistência entre a descrição declarativa no código Terraform e o estado real da infraestrutura na nuvem. O estado do Terraform pode ser armazenado localmente ou em um armazenamento remoto para facilitar o trabalho em equipe e garantir a segurança das informações sensíveis.
+
+O arquivo terraform.tfstate é uma informação sensível e sua exposição pode gerar sérios riscos de segurança. Este arquivo contém detalhes sobre a infraestrutura provisionada, incluindo IDs de recursos, endereços IP e chaves de acesso. Se exposto, um atacante pode usar essas informações para comprometer a segurança da infraestrutura.
+
+Além disso, o arquivo de estado pode conter credenciais de autenticação, como chaves de API e tokens de acesso, que, se acessados por terceiros não autorizados, podem ser explorados para ganhar acesso não autorizado à infraestrutura.
+
+Para proteger o arquivo de estado do Terraform, é essencial armazená-lo de forma segura, limitar o acesso apenas a membros autorizados da equipe e evitar a exposição acidental. Recomenda-se o uso de serviços de armazenamento na nuvem com controle de acesso adequado ou soluções de gerenciamento seguro de segredos, como o Vault da HashiCorp.
+
+Em resumo, proteger o arquivo de estado do Terraform é fundamental para garantir a segurança da infraestrutura na nuvem e prevenir potenciais violações de segurança.
 
 ## Contribuindo
 
