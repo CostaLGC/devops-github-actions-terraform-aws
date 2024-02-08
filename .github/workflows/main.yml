@@ -21,3 +21,6 @@ jobs:
     - name: Descriptografar terraform.tfstate
       if: steps.check_tfstate.outputs.tfstate_exists == 'true'
       run: openssl aes-256-cbc -d -in terraform.tfstate -out terraform.tfstate.decrypted -k ${{ secrets.TERRAFORM_TFSTATE_PASSWORD }}
+    - name: Criar terraform.tfstate se não existir
+      if: steps.check_tfstate.outputs.tfstate_exists != 'true'
+      run: echo "Criando terraform.tfstate..." && touch terraform.tfstate
