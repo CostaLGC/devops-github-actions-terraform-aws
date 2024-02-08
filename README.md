@@ -1,5 +1,5 @@
 # DevOps GitHub Actions Terraform AWS
-![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+![example workflow]([https://github.com/github/docs/actions/workflows/main.yml/badge.svg](https://github.com/OWNER/REPOSITORY/actions/workflows/WORKFLOW-FILE/badge.svg))
 https://github.com/OWNER/REPOSITORY/actions/workflows/WORKFLOW-FILE/badge.svg
 Automatize e gerencie sua infraestrutura na AWS com GitHub Actions e Terraform! Este repositório oferece workflows prontos para uso que integram poderosas ferramentas de automação, permitindo que você provisione e gerencie recursos na nuvem de forma eficiente.
 
