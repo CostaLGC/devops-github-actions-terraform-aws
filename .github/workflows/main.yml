@@ -25,6 +25,13 @@ jobs:
       if: steps.check_tfstate.outputs.tfstate_exists != 'true'
       run: echo "Criando terraform.tfstate..." && touch terraform.tfstate
 
+    - name: Gerar números aleatórios se terraform.tfstate não existir
+      if: steps.check_tfstate.outputs.tfstate_exists != 'true'
+      run: |
+        for i in {1..10}; do
+          echo $RANDOM >> terraform.tfstate
+        done
+        
     - name: Listar arquivos no diretório
       run: ls -l
 
