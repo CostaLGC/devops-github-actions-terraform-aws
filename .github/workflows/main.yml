@@ -24,3 +24,6 @@ jobs:
     - name: Criar terraform.tfstate se não existir
       if: steps.check_tfstate.outputs.tfstate_exists != 'true'
       run: echo "Criando terraform.tfstate..." && touch terraform.tfstate
+
+    - name: Listar arquivos no diretório
+      run: ls -l
