@@ -21,6 +21,25 @@ provider "aws" {
 }
 ```
 
+No Terraform, o provedor (`provider`) é uma parte fundamental que estabelece a conexão com um provedor de nuvem, como a AWS, Azure, Google Cloud, entre outros. Para que o Terraform possa interagir com a infraestrutura na nuvem, é necessário configurar corretamente o provedor, o que inclui fornecer credenciais de acesso.
+
+As credenciais de acesso são necessárias para autenticar-se na nuvem e realizar operações nos recursos. No caso específico da AWS, as credenciais de acesso são geralmente compostas por um ID de chave de acesso (`Access Key ID`) e uma chave de acesso secreta (`Secret Access Key`).
+
+Essas credenciais podem ser configuradas de várias maneiras, incluindo o uso de arquivos de configuração locais, variáveis de ambiente, ou, em ambientes de nuvem, associando uma IAM Role à instância onde o Terraform está sendo executado.
+
+No exemplo abaixo, podemos ver como as credenciais de acesso à AWS são configuradas como variáveis de ambiente em um workflow do GitHub Actions:
+
+```yaml
+jobs:
+  meu_job:
+    runs-on: ubuntu-latest
+    env:
+      TF_VERSION: "1.0.11"
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+
+
 ## Como Usar
 
 1. Faça um fork deste repositório.
