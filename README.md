@@ -8,6 +8,16 @@ Este repositório é um recurso valioso para DevOps que desejam automatizar e ge
 - **Configuração Fácil com Terraform e AWS:** Oferece uma configuração simples e pronta para uso com Terraform e AWS.
 - **Personalizável:** Fluxos de trabalho flexíveis que podem ser ajustados para atender às necessidades específicas de DevOps.
 
+## Configuração do Provider
+
+A primeira etapa ao trabalhar com Terraform é a configuração do provider, responsável por comunicar-se com o provedor de nuvem (no nosso caso, a AWS) e realizar operações nos recursos. Para isso, utilizamos o bloco `provider` no código Terraform. Veja um exemplo:
+
+```hcl
+provider "aws" {
+  region = "us-east-1"
+}
+```
+
 ## Como Usar
 
 1. **Faça um Fork:** Comece fazendo um fork deste repositório para sua própria conta no GitHub.
